@@ -10,6 +10,7 @@ gem 'pg'
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+gem 'faker'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -33,7 +34,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'faker'
+  
   gem 'will_paginate'
 gem 'bootstrap-will_paginate'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
