@@ -18,7 +18,11 @@ users = User.all
 	title = "this is a task"
   description = Faker::Lorem.sentence(5)
   due_date = n.days.from_now
-  users.each { |user| user.tasks.create!(description: description, title: title, due_date: due_date) }
+  users.each do |user| 
+  	user.tasks.create!(description: description, title: title, due_date: due_date)
+  	user.task_total += 1
+  	user.save
+  end
 end
 
 

@@ -6,11 +6,11 @@
         <div>
           <%= if current_user.score == 0 
             "You have completed #{ current_user.score} task's" 
+            
+            elsif current_user.score > 0 && current_user.task_total > 0 
+                user_score = current_user.score / current_user.task_total 
+                 " You're score is #{user_score}"
             end
-           if current_user.score > 0 && current_user.task_total > 0 
-                 current_user.score / current_user.task_total 
-                 " You're score is #{ current_user.score}"
-              end
           %>
         </div>
         <span><%= link_to 'Log Out  |', destroy_user_session_path, method: :delete, class: "navbar-brand" %></span>
